@@ -2,13 +2,13 @@ package com.example.ddobagi;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
 import com.android.volley.AuthFailureError;
-import com.android.volley.Network;
 import com.android.volley.NetworkResponse;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -24,6 +24,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
+    public static final int REQUEST_CODE_MAIN = 101;
     static RequestQueue requestQueue;
 
     @Override
@@ -31,11 +32,20 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button nextBtn  = findViewById(R.id.button5);
+        Button nextBtn  = findViewById(R.id.login_btn);
         nextBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 makeRequest();
+            }
+        });
+
+        Button playBtn = findViewById(R.id.play_btn);
+        playBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), GameTestActivity.class);
+                startActivity(intent);
             }
         });
 
