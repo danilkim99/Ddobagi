@@ -31,9 +31,10 @@
             android:layout_marginStart="15dp"
             android:layout_marginTop="15dp"
             android:background="@drawable/exit_btn"
+            android:fontFamily="@font/batang"
             android:text="나가기"
             android:textSize="25sp"
-            android:fontFamily="@font/batang"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -147,9 +148,10 @@
             android:layout_marginTop="15dp"
             android:layout_marginRight="15dp"
             android:background="@drawable/exit_btn"
+            android:fontFamily="@font/batang"
             android:text="로그인"
             android:textSize="25sp"
-            android:fontFamily="@font/batang"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
