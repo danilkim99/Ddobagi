@@ -2,6 +2,7 @@ package com.example.ddobagi;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
@@ -53,6 +54,15 @@ public class GameTestActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 finish();
+            }
+        });
+
+        Button speakAns = findViewById(R.id.sttStart);
+        speakAns.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), VoiceRecognizer.class);
+                startActivity(intent);
             }
         });
 
@@ -179,4 +189,5 @@ public class GameTestActivity extends AppCompatActivity {
     public void println(String data){
         Log.d("GameTestActivity", data);
     }
+
 }
