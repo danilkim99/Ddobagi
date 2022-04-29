@@ -13,6 +13,12 @@
         android:theme="@style/Theme.Ddobagi"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".RegistrationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+        <activity
             android:name=".GameTestActivity"
             android:exported="false" />
         <activity
